@@ -1,5 +1,3 @@
-#!/bin/sh
-
 OPTIND=1
 
 outfile="output/output.png"
@@ -10,7 +8,7 @@ seed=123
 size=512
 iter=1000
 
-while getopts "h?:c:s:o:d:i:" opt; do
+while getopts "h?:c:s:o:d:i:z:" opt; do
 	case "${opt}" in
 	c ) cweight=$OPTARG
 	;;
