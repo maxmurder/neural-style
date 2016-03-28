@@ -45,5 +45,5 @@ do
 filename=$(basename "$file")
 ofile="$outdir/${filename%.*}_output.png"
 
-th neural_style.lua -gpu 0 -backend clnn -save_iter 0 -image_size $size -num_iterations $iter -seed $seed -style_weight $sweight -content_weight $cweight -output_image $ofile -style_image $file -content_image $1
+th neural_style.lua -gpu 0 -backend clnn -save_iter 0 -normalize_gradients -image_size $size -num_iterations $iter -seed $seed -style_weight $sweight -content_weight $cweight -output_image $ofile -style_image $file -content_image $1
 done
