@@ -25,14 +25,15 @@ while getopts "h?:c:s:o:d:t:i:z:" opt; do
 	z ) size=$OPTARG
 	;;
 	h|\?)
-	echo "sh runNINnet.sh -[cstiozh] <content-image>
+	echo "sh runNINnet.sh -[cstiozhd] <content-image>
 		-c	content weight
 		-s	style weight
 		-t	number of iterations
 		-i 	style files
 		-o	output directory
 		-z	output size
-		-h	display help"
+		-h	display help
+		-d seed"
 		exit 0
 	;;
 	esac
@@ -41,7 +42,7 @@ done
 shift $(($OPTIND - 1))
 
 for file in $indir
-do 
+do
 filename=$(basename "$file")
 ofile="$outdir/${filename%.*}_output.png"
 
