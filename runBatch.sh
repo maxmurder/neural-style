@@ -33,7 +33,7 @@ while getopts "h?:c:s:o:d:t:i:z:" opt; do
 		-o	output directory
 		-z	output size
 		-h	display help
-		-d seed"
+		-d	seed"
 		exit 0
 	;;
 	esac
